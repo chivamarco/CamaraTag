@@ -10,11 +10,11 @@
         android:id="@+id/Bcapture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="94dp"
+        android:layout_marginBottom="34dp"
         android:onClick="launchCamera"
-        android:text="Tomar Foto" />
+        android:text="Tomar Foto"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -24,5 +24,72 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:minHeight="300dp"
-        android:minWidth="300dp" />
+        android:minWidth="300dp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:minHeight="300dp"
+        android:minWidth="300dp"
+        android:onClick="ImagenOpen"
+        android:visibility="visible" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Bcapture"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Bcapture"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="0dp"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"
+            android:text="Trabajo" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/radioButton"
+            android:layout_alignBottom="@+id/radioButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Escuela" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_below="@+id/textView"
+            android:layout_marginLeft="10dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Familia" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona Carpeta "
+        android:layout_above="@+id/radioGroup"
+        android:layout_alignLeft="@+id/Bcapture"
+        android:layout_alignStart="@+id/Bcapture" />
 </RelativeLayout>
